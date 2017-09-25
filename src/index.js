@@ -71,7 +71,7 @@ class Winterfell extends React.Component {
     this.setState({
       action          : nextProps.action,
       schema          : nextProps.schema,
-      questionAnswers : nextProps.questionAnswers
+      questionAnswers : Object.assign({}, nextProps.questionAnswers, this.state.questionAnswers),
     });
   }
 
