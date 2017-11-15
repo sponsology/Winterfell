@@ -57,8 +57,7 @@ class Winterfell extends React.Component {
 
     if (!currentPanel) {
       throw new Error('Winterfell: Could not find initial panel and failed to render.');
-    }
-
+    }  
     this.state = {
       schema          : schema,
       currentPanel    : currentPanel,
