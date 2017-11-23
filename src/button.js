@@ -12,7 +12,7 @@ class Button extends React.Component {
   render() {
     return (
       <ProgressButton href="#"
-         className={this.props.className}
+         
          state={this.props.buttonState}
          onClick={this.handleClick.bind(this)}>
         {this.props.text}
