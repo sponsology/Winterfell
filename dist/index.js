@@ -65,7 +65,6 @@ var Winterfell = (function (_React$Component) {
     if (!currentPanel) {
       throw new Error('Winterfell: Could not find initial panel and failed to render.');
     }
-
     this.state = {
       schema: schema,
       currentPanel: currentPanel,
@@ -80,7 +79,7 @@ var Winterfell = (function (_React$Component) {
       this.setState({
         action: nextProps.action,
         schema: nextProps.schema,
-        questionAnswers: Object.assign({}, nextProps.questionAnswers, this.state.questionAnswers),
+        questionAnswers: Object.assign({}, nextProps.questionAnswers, this.state.questionAnswers)
       });
     }
   }, {
@@ -210,7 +209,7 @@ Winterfell.addErrorMessages = Winterfell.errorMessages.addErrorMessages;
 Winterfell.addValidationMethod = Winterfell.validation.addValidationMethod;
 Winterfell.addValidationMethods = Winterfell.validation.addValidationMethods;
 
-Winterfell.defaultPRops = {
+Winterfell.defaultProps = {
   onSubmit: function onSubmit() {},
   onUpdate: function onUpdate() {},
   onSwitchPanel: function onSwitchPanel() {},

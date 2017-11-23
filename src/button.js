@@ -1,4 +1,5 @@
 var React = require('react');
+import ProgressButton from 'react-progress-button'
 
 class Button extends React.Component {
 
@@ -10,11 +11,12 @@ class Button extends React.Component {
 
   render() {
     return (
-      <button href="#"
+      <ProgressButton href="#"
          className={this.props.className}
+         state={this.state.buttonState}
          onClick={this.handleClick.bind(this)}>
         {this.props.text}
-      </button>
+      </ProgressButton>
     );
   }
 
