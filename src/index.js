@@ -27,7 +27,8 @@ class Winterfell extends React.Component {
       panelId                : undefined,
       disableSubmit          : false,
       renderError            : undefined,
-      renderRequiredAsterisk : undefined
+      renderRequiredAsterisk : undefined,
+      buttonState            : ''
     }, this.props);
 
     this.panelHistory = [];
@@ -57,7 +58,7 @@ class Winterfell extends React.Component {
 
     if (!currentPanel) {
       throw new Error('Winterfell: Could not find initial panel and failed to render.');
-    }  
+    }
     this.state = {
       schema          : schema,
       currentPanel    : currentPanel,
@@ -160,7 +161,8 @@ class Winterfell extends React.Component {
                          onAnswerChange={this.handleAnswerChange.bind(this)}
                          onPanelBack={this.handleBackButtonClick.bind(this)}
                          onSwitchPanel={this.handleSwitchPanel.bind(this)}
-                         onSubmit={this.handleSubmit.bind(this)} />
+                         onSubmit={this.handleSubmit.bind(this)}
+                        buttonState = {this.props.buttonState} />
         </div>
       </form>
     );

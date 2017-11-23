@@ -23,6 +23,7 @@ class Button extends React.Component {
 };
 
 Button.defaultProps = {
+  buttonState: '',
   text      : 'Submit',
   className : undefined,
   onClick   : () => {}

@@ -40,7 +40,8 @@ var Winterfell = (function (_React$Component) {
       panelId: undefined,
       disableSubmit: false,
       renderError: undefined,
-      renderRequiredAsterisk: undefined
+      renderRequiredAsterisk: undefined,
+      buttonState: ''
     }, this.props);
 
     this.panelHistory = [];
@@ -179,7 +180,8 @@ var Winterfell = (function (_React$Component) {
             onAnswerChange: this.handleAnswerChange.bind(this),
             onPanelBack: this.handleBackButtonClick.bind(this),
             onSwitchPanel: this.handleSwitchPanel.bind(this),
-            onSubmit: this.handleSubmit.bind(this) })
+            onSubmit: this.handleSubmit.bind(this),
+            buttonState: this.props.buttonState })
         )
       );
     }

@@ -39,7 +39,7 @@ var Button = (function (_React$Component) {
         _reactProgressButton2['default'],
         { href: '#',
           className: this.props.className,
-          state: this.state.buttonState,
+          state: this.props.buttonState,
           onClick: this.handleClick.bind(this) },
         this.props.text
       );
@@ -52,6 +52,7 @@ var Button = (function (_React$Component) {
 ;
 
 Button.defaultProps = {
+  buttonState: '',
   text: 'Submit',
   className: undefined,
   onClick: function onClick() {}
