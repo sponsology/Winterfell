@@ -38,7 +38,7 @@ var Button = (function (_React$Component) {
       return React.createElement(
         _reactProgressButton2['default'],
         { href: '#',
-          className: this.props.className,
+
           state: this.props.buttonState,
           onClick: this.handleClick.bind(this) },
         this.props.text
