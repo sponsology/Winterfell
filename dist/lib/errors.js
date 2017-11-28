@@ -117,7 +117,7 @@ var errorMessages = {
   /*
    * Mobile phone
    */
-  isMobilePhone: 'Please enter a valid mobile number',
+  isMobilePhone: 'Please enter a valid phone number',
 
   /*
    * MongoId only
