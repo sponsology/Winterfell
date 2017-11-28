@@ -120,6 +120,11 @@ var errorMessages = {
   isMobilePhone: 'Please enter a valid phone number',
 
   /*
+  * Percentage
+  */
+  isPercentage: 'Please enter a valid percentage',
+
+  /*
    * MongoId only
    */
   isMongoId: 'Please enter a valid MongoId',
