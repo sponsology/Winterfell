@@ -24,7 +24,7 @@ var Button = (function (_React$Component) {
 
     _get(Object.getPrototypeOf(Button.prototype), 'constructor', this).call(this, props);
     console.log("Button props", props);
-    this.setState({ buttonState: props.buttonState });
+    this.state = { buttonState: props.buttonState };
   }
 
   _createClass(Button, [{

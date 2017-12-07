@@ -5,7 +5,7 @@ class Button extends React.Component {
   constructor(props){
     super(props)
     console.log("Button props", props)
-    this.setState({buttonState: props.buttonState})
+    this.state = {buttonState: props.buttonState}
   }
 
   handleClick(e) {
