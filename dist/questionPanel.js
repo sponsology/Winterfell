@@ -59,7 +59,8 @@ var QuestionPanel = (function (_React$Component) {
       var validationErrors = _.chain(this.state.validationErrors).set(questionId, questionValidationErrors).value();
 
       this.setState({
-        validationErrors: validationErrors
+        validationErrors: validationErrors,
+        buttonState: 'error'
       });
     }
   }, {

@@ -48,7 +48,8 @@ class QuestionPanel extends React.Component {
                             .value();
 
     this.setState({
-      validationErrors : validationErrors
+      validationErrors : validationErrors,
+      buttonState: 'error'
     });
   }
 
