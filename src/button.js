@@ -9,10 +9,7 @@ class Button extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    this.props.onClick();
-    setTimeout(() => {
-      this.setState({buttonState: 'success'})
-    }, 3000)
+    this.props.onClick();    
   }
 
   render() {
