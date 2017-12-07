@@ -24,6 +24,7 @@ var Button = (function (_React$Component) {
 
     _get(Object.getPrototypeOf(Button.prototype), 'constructor', this).call(this, props);
     console.log("Button props", props);
+    this.setState({ buttonState: props.buttonState });
   }
 
   _createClass(Button, [{
@@ -33,12 +34,20 @@ var Button = (function (_React$Component) {
       this.props.onClick();
     }
   }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      console.log("NextProps", nextProps);
+      this.setState({
+        buttonState: nextProps.buttonState
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
       return React.createElement(
         _reactProgressButton2['default'],
         { href: '#',
-          state: this.props.buttonState,
+          state: this.state.buttonState,
           onClick: this.handleClick.bind(this) },
         this.props.text
       );

@@ -33,6 +33,14 @@ var QuestionPanel = (function (_React$Component) {
   }
 
   _createClass(QuestionPanel, [{
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      console.log("NextProps", nextProps);
+      this.setState({
+        buttonState: nextProps.buttonState
+      });
+    }
+  }, {
     key: 'handleAnswerValidate',
     value: function handleAnswerValidate(questionId, questionAnswer, validations) {
       var _this = this;
@@ -236,7 +244,7 @@ var QuestionPanel = (function (_React$Component) {
           !this.props.button.disabled ? React.createElement(Button, { text: this.props.button.text,
             onClick: this.handleMainButtonClick.bind(this),
             className: this.props.classes.controlButton,
-            buttonState: this.props.buttonState }) : undefined
+            buttonState: this.state.buttonState }) : undefined
         )
       );
     }

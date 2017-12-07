@@ -19,6 +19,13 @@ class QuestionPanel extends React.Component {
     };
   }
 
+  componentWillReceiveProps(nextProps) {
+    console.log("NextProps" , nextProps);
+    this.setState({
+      buttonState     : nextProps.buttonState
+    });
+  }
+
   handleAnswerValidate(questionId, questionAnswer, validations) {
     if (typeof validations === 'undefined'
          || validations.length === 0) {
@@ -231,7 +238,7 @@ class QuestionPanel extends React.Component {
                 <Button text={this.props.button.text}
                         onClick={this.handleMainButtonClick.bind(this)}
                         className={this.props.classes.controlButton}
-                        buttonState={this.props.buttonState} />
+                        buttonState={this.state.buttonState} />
               )
             : undefined}
         </div>
