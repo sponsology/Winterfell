@@ -29,13 +29,8 @@ var Button = (function (_React$Component) {
   _createClass(Button, [{
     key: 'handleClick',
     value: function handleClick(e) {
-      var _this = this;
-
       e.preventDefault();
       this.props.onClick();
-      setTimeout(function () {
-        _this.setState({ buttonState: 'success' });
-      }, 3000);
     }
   }, {
     key: 'render',

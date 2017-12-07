@@ -231,12 +231,12 @@ var QuestionPanel = (function (_React$Component) {
           { className: this.props.classes.buttonBar },
           this.props.panelHistory.length > 1 && !this.props.backButton.disabled ? React.createElement(Button, { text: this.props.backButton.text || 'Back',
             onClick: this.handleBackButtonClick.bind(this),
-            className: this.props.classes.backButton,
-            buttonState: this.state.buttonState }) : undefined,
+            className: this.props.classes.backButton
+          }) : undefined,
           !this.props.button.disabled ? React.createElement(Button, { text: this.props.button.text,
             onClick: this.handleMainButtonClick.bind(this),
             className: this.props.classes.controlButton,
-            buttonState: this.state.buttonState }) : undefined
+            buttonState: this.props.buttonState }) : undefined
         )
       );
     }
