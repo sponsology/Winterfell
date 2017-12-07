@@ -3183,9 +3183,9 @@ v8flags@^2.0.2:
   dependencies:
     user-home "^1.1.1"
 
-"validator@https://github.com/sponsology/validator.js/tarball/d0da7d07730f18c4e7f098c9940c2d552b057dc6":
+"validator@https://github.com/sponsology/validator.js/tarball/b8a18eb8b422ab3c848d936ffba9444e0a01772a":
   version "9.1.1"
-  resolved "https://github.com/sponsology/validator.js/tarball/d0da7d07730f18c4e7f098c9940c2d552b057dc6#d2f1f439c831b4affaf86ec73a45c694c0cfea1c"
+  resolved "https://github.com/sponsology/validator.js/tarball/b8a18eb8b422ab3c848d936ffba9444e0a01772a#5bf3f195afd7ccc3db2629025bde61d5b3f222d0"
 
 verror@1.10.0:
   version "1.10.0"

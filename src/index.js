@@ -192,7 +192,8 @@ Winterfell.defaultProps = {
   onSubmit      : () => {},
   onUpdate      : () => {},
   onSwitchPanel : () => {},
-  onRender      : () => {}
+  onRender      : () => {},
+  buttonState   : () => {},
 };
 
 module.exports = Winterfell;
