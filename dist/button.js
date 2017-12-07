@@ -28,9 +28,13 @@ var Button = (function (_React$Component) {
   _createClass(Button, [{
     key: 'handleClick',
     value: function handleClick(e) {
-      e.preventDefault();
+      var _this = this;
 
+      e.preventDefault();
       this.props.onClick();
+      setTimeout(function () {
+        _this.setState({ buttonState: success });
+      }, 3000);
     }
   }, {
     key: 'render',
@@ -38,7 +42,6 @@ var Button = (function (_React$Component) {
       return React.createElement(
         _reactProgressButton2['default'],
         { href: '#',
-
           state: this.props.buttonState,
           onClick: this.handleClick.bind(this) },
         this.props.text

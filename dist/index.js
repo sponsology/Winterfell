@@ -40,8 +40,7 @@ var Winterfell = (function (_React$Component) {
       panelId: undefined,
       disableSubmit: false,
       renderError: undefined,
-      renderRequiredAsterisk: undefined,
-      buttonState: ''
+      renderRequiredAsterisk: undefined
     }, this.props);
 
     this.panelHistory = [];
@@ -216,7 +215,7 @@ Winterfell.defaultProps = {
   onUpdate: function onUpdate() {},
   onSwitchPanel: function onSwitchPanel() {},
   onRender: function onRender() {},
-  buttonState: function buttonState() {}
+  buttonState: ''
 };
 
 module.exports = Winterfell;

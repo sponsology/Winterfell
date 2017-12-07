@@ -27,8 +27,7 @@ class Winterfell extends React.Component {
       panelId                : undefined,
       disableSubmit          : false,
       renderError            : undefined,
-      renderRequiredAsterisk : undefined,
-      buttonState            : ''
+      renderRequiredAsterisk : undefined
     }, this.props);
 
     this.panelHistory = [];
@@ -193,7 +192,7 @@ Winterfell.defaultProps = {
   onUpdate      : () => {},
   onSwitchPanel : () => {},
   onRender      : () => {},
-  buttonState   : () => {},
+  buttonState   :       '',
 };
 
 module.exports = Winterfell;
