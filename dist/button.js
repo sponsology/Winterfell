@@ -19,10 +19,11 @@ var React = require('react');
 var Button = (function (_React$Component) {
   _inherits(Button, _React$Component);
 
-  function Button() {
+  function Button(props) {
     _classCallCheck(this, Button);
 
-    _get(Object.getPrototypeOf(Button.prototype), 'constructor', this).apply(this, arguments);
+    _get(Object.getPrototypeOf(Button.prototype), 'constructor', this).call(this, props);
+    console.log("Button props", props);
   }
 
   _createClass(Button, [{
@@ -33,7 +34,7 @@ var Button = (function (_React$Component) {
       e.preventDefault();
       this.props.onClick();
       setTimeout(function () {
-        _this.setState({ buttonState: success });
+        _this.setState({ buttonState: 'success' });
       }, 3000);
     }
   }, {
