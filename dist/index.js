@@ -40,7 +40,8 @@ var Winterfell = (function (_React$Component) {
       panelId: undefined,
       disableSubmit: false,
       renderError: undefined,
-      renderRequiredAsterisk: undefined
+      renderRequiredAsterisk: undefined,
+      buttonState: ""
     }, this.props);
 
     this.panelHistory = [];
@@ -69,7 +70,8 @@ var Winterfell = (function (_React$Component) {
       schema: schema,
       currentPanel: currentPanel,
       action: props.action,
-      questionAnswers: props.questionAnswers
+      questionAnswers: props.questionAnswers,
+      buttonState: props.buttonState
     };
   }
 
@@ -79,7 +81,8 @@ var Winterfell = (function (_React$Component) {
       this.setState({
         action: nextProps.action,
         schema: nextProps.schema,
-        questionAnswers: Object.assign({}, nextProps.questionAnswers, this.state.questionAnswers)
+        questionAnswers: Object.assign({}, nextProps.questionAnswers, this.state.questionAnswers),
+        buttonState: nextProps.buttonState
       });
     }
   }, {
@@ -180,7 +183,7 @@ var Winterfell = (function (_React$Component) {
             onPanelBack: this.handleBackButtonClick.bind(this),
             onSwitchPanel: this.handleSwitchPanel.bind(this),
             onSubmit: this.handleSubmit.bind(this),
-            buttonState: this.props.buttonState })
+            buttonState: this.state.buttonState })
         )
       );
     }
@@ -214,8 +217,7 @@ Winterfell.defaultProps = {
   onSubmit: function onSubmit() {},
   onUpdate: function onUpdate() {},
   onSwitchPanel: function onSwitchPanel() {},
-  onRender: function onRender() {},
-  buttonState: ''
+  onRender: function onRender() {}
 };
 
 module.exports = Winterfell;

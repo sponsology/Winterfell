@@ -27,7 +27,8 @@ var QuestionPanel = (function (_React$Component) {
     _get(Object.getPrototypeOf(QuestionPanel.prototype), 'constructor', this).call(this, props);
 
     this.state = {
-      validationErrors: this.props.validationErrors
+      validationErrors: this.props.validationErrors,
+      buttonState: this.props.buttonState
     };
   }
 
@@ -102,7 +103,8 @@ var QuestionPanel = (function (_React$Component) {
         });
 
         this.setState({
-          validationErrors: validationErrors
+          validationErrors: validationErrors,
+          buttonState: 'error'
         });
         return;
       }
@@ -230,10 +232,11 @@ var QuestionPanel = (function (_React$Component) {
           this.props.panelHistory.length > 1 && !this.props.backButton.disabled ? React.createElement(Button, { text: this.props.backButton.text || 'Back',
             onClick: this.handleBackButtonClick.bind(this),
             className: this.props.classes.backButton,
-            buttonState: this.props.buttonState }) : undefined,
+            buttonState: this.state.buttonState }) : undefined,
           !this.props.button.disabled ? React.createElement(Button, { text: this.props.button.text,
             onClick: this.handleMainButtonClick.bind(this),
-            className: this.props.classes.controlButton }) : undefined
+            className: this.props.classes.controlButton,
+            buttonState: this.state.buttonState }) : undefined
         )
       );
     }

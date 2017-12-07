@@ -27,7 +27,8 @@ class Winterfell extends React.Component {
       panelId                : undefined,
       disableSubmit          : false,
       renderError            : undefined,
-      renderRequiredAsterisk : undefined
+      renderRequiredAsterisk : undefined,
+      buttonState            : ""
     }, this.props);
 
     this.panelHistory = [];
@@ -62,7 +63,8 @@ class Winterfell extends React.Component {
       schema          : schema,
       currentPanel    : currentPanel,
       action          : props.action,
-      questionAnswers : props.questionAnswers
+      questionAnswers : props.questionAnswers,
+      buttonState     : props.buttonState
     };
   }
 
@@ -71,6 +73,7 @@ class Winterfell extends React.Component {
       action          : nextProps.action,
       schema          : nextProps.schema,
       questionAnswers : Object.assign({}, nextProps.questionAnswers, this.state.questionAnswers),
+      buttonState     : nextProps.buttonState
     });
   }
 
@@ -161,7 +164,7 @@ class Winterfell extends React.Component {
                          onPanelBack={this.handleBackButtonClick.bind(this)}
                          onSwitchPanel={this.handleSwitchPanel.bind(this)}
                          onSubmit={this.handleSubmit.bind(this)}
-                        buttonState = {this.props.buttonState} />
+                         buttonState = {this.state.buttonState} />
         </div>
       </form>
     );
@@ -192,7 +195,6 @@ Winterfell.defaultProps = {
   onUpdate      : () => {},
   onSwitchPanel : () => {},
   onRender      : () => {},
-  buttonState   :       '',
 };
 
 module.exports = Winterfell;

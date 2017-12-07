@@ -14,7 +14,8 @@ class QuestionPanel extends React.Component {
     super(props);
 
     this.state = {
-      validationErrors : this.props.validationErrors
+      validationErrors : this.props.validationErrors,
+      buttonState      : this.props.buttonState
     };
   }
 
@@ -88,7 +89,8 @@ class QuestionPanel extends React.Component {
       });
 
       this.setState({
-        validationErrors : validationErrors
+        validationErrors : validationErrors,
+        buttonState      : 'error'
       });
       return;
     }
@@ -221,14 +223,15 @@ class QuestionPanel extends React.Component {
                 <Button text={this.props.backButton.text || 'Back'}
                         onClick={this.handleBackButtonClick.bind(this)}
                         className={this.props.classes.backButton}
-                        buttonState={this.props.buttonState} />
+                        buttonState={this.state.buttonState} />
               )
             : undefined}
           {!this.props.button.disabled
             ? (
                 <Button text={this.props.button.text}
                         onClick={this.handleMainButtonClick.bind(this)}
-                        className={this.props.classes.controlButton} />
+                        className={this.props.classes.controlButton}
+                        buttonState={this.state.buttonState} />
               )
             : undefined}
         </div>
