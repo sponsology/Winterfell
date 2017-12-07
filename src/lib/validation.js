@@ -67,7 +67,7 @@ var validateAnswer = (value, validationItem, questionAnswers) => {
    * Push the value of the question we're validating to
    * the first parameter of the validationParameters
    */
-  validationParameters.unshift(value);
+  validationParameters.unshift(""+value);
 
   /*
    * Return the result of the validation method running
