@@ -35,7 +35,6 @@ var QuestionPanel = (function (_React$Component) {
   _createClass(QuestionPanel, [{
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
-      console.log("NextProps", nextProps);
       this.setState({
         buttonState: nextProps.buttonState
       });

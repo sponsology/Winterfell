@@ -19,8 +19,7 @@ class QuestionPanel extends React.Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
-    console.log("NextProps" , nextProps);
+  componentWillReceiveProps(nextProps) {    
     this.setState({
       buttonState     : nextProps.buttonState
     });

@@ -41,7 +41,7 @@ var Winterfell = (function (_React$Component) {
       disableSubmit: false,
       renderError: undefined,
       renderRequiredAsterisk: undefined,
-      buttonState: undefined
+      buttonState: ''
     }, this.props);
 
     this.panelHistory = [];
@@ -78,7 +78,6 @@ var Winterfell = (function (_React$Component) {
   _createClass(Winterfell, [{
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
-      console.log("NextProps", nextProps);
       this.setState({
         action: nextProps.action,
         schema: nextProps.schema,

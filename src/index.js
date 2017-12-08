@@ -28,7 +28,7 @@ class Winterfell extends React.Component {
       disableSubmit          : false,
       renderError            : undefined,
       renderRequiredAsterisk : undefined,
-      buttonState            : undefined
+      buttonState            : ''
     }, this.props);
 
     this.panelHistory = [];
@@ -69,7 +69,6 @@ class Winterfell extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log("NextProps" , nextProps);
     this.setState({
       action          : nextProps.action,
       schema          : nextProps.schema,

@@ -36,7 +36,6 @@ var Button = (function (_React$Component) {
   }, {
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
-      console.log("NextProps", nextProps);
       this.setState({
         buttonState: nextProps.buttonState
       });
