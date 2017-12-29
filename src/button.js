@@ -13,7 +13,8 @@ class Button extends React.Component {
     this.props.onClick();
   }
 
-  componentWillReceiveProps(nextProps) {    
+  componentWillReceiveProps(nextProps) {
+    //console.log("NextProps" , nextProps);
     this.setState({
       buttonState     : nextProps.buttonState
     });
