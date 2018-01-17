@@ -141,7 +141,7 @@ var Question = (function (_React$Component) {
   }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
-      if (typeof this.props.input['default'] === 'undefined' || this.props.input.type === 'checkboxInput' && typeof this.props.questionAnswers[this.props.questionId] === 'undefined') {
+      if (typeof this.props.input['default'] === 'undefined' || (this.props.input.type === 'checkboxInput' || this.props.input.type === 'privacyInput') && typeof this.props.questionAnswers[this.props.questionId] === 'undefined') {
         return;
       }
 
