@@ -50,7 +50,7 @@ class PrivacyInput extends React.Component {
                                                         : undefined))} />
           By checking this box, I agree to the terms of the&nbsp;
           <a href="/privacy-policy">Privacy Policy</a>
-          &nbsp;, and the&nbsp;
+          , and the&nbsp;
           <a href="/terms">Terms and Conditions</a>
 
         </label>

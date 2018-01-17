@@ -70,7 +70,7 @@ var PrivacyInput = (function (_React$Component) {
             { href: '/privacy-policy' },
             'Privacy Policy'
           ),
-          ' , and the ',
+          ', and the ',
           React.createElement(
             'a',
             { href: '/terms' },
