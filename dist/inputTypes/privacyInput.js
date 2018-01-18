@@ -52,6 +52,11 @@ var PrivacyInput = (function (_React$Component) {
         'div',
         { className: this.props.classes.privacyInput },
         React.createElement(
+          'p',
+          null,
+          'Welcome. You are about to set up your Account and Profile with our community.  Your Profile will be comprehensive to optimise your matches.  You can save this form as you go.'
+        ),
+        React.createElement(
           'label',
           { className: this.props.classes.privacyLabel,
             id: this.props.labelId },
@@ -64,26 +69,17 @@ var PrivacyInput = (function (_React$Component) {
             required: 'required',
             onChange: this.handleChange.bind(this),
             onBlur: this.props.onBlur.bind(null, this.state.checked ? this.props.value : undefined) }),
+          'By checking this box, I agree to the terms of the ',
           React.createElement(
-            'p',
-            null,
-            'Welcome. You are about to set up your Account and Profile with our community.  Your Profile will be comprehensive to optimise your matches.  You can save this form as you go.'
+            'a',
+            { href: '/privacy-policy' },
+            'Privacy Policy'
           ),
+          ', and the ',
           React.createElement(
-            'p',
-            null,
-            'By checking this box, I agree to the terms of the ',
-            React.createElement(
-              'a',
-              { href: '/privacy-policy' },
-              'Privacy Policy'
-            ),
-            ', and the ',
-            React.createElement(
-              'a',
-              { href: '/terms' },
-              'Terms and Conditions'
-            )
+            'a',
+            { href: '/terms' },
+            'Terms and Conditions'
           )
         )
       );
