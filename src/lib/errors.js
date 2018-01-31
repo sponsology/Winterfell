@@ -33,6 +33,8 @@ var errorMessages = {
     return errorMessage;
   },
 
+  isAscii         : 'Please enter or select a value',
+
   /*
    * Valid email address
    */
