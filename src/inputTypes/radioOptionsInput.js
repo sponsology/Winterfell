@@ -27,6 +27,7 @@ class RadioOptionsInput extends React.Component {
               <input type="radio"
                      name={this.props.name}
                      aria-labelledby={this.props.labelId}
+                     autocomplete={this.props.autocomplete}
                      checked={this.state.value == opt.value}
                      className={this.props.classes.radio}
                      required={this.props.required
@@ -48,6 +49,7 @@ RadioOptionsInput.defaultProps = {
   classes  : {},
   name     : '',
   value    : '',
+  autocomplete: '',
   options  : [],
   onChange : () => {},
   onBlur   : () => {}

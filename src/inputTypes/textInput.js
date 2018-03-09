@@ -20,6 +20,7 @@ class TextInput extends React.Component {
     return (
       <input type="text"
              name={this.props.name}
+             autocomplete={this.props.autocomplete}
              id={this.props.id}
              aria-labelledby={this.props.labelId}
              className={this.props.classes.input}
@@ -42,6 +43,7 @@ TextInput.defaultProps = {
   id          : '',
   value       : '',
   placeholder : '',
+  autocomplete: '',
   onChange    : () => {},
   onBlur      : () => {},
   onKeyDown   : () => {}

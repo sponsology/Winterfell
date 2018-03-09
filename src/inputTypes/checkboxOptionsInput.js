@@ -39,6 +39,7 @@ class CheckboxOptionsInput extends React.Component {
                    id={this.props.labelId}>
               <input type="checkbox"
                      name={this.props.name}
+                     autocomplete={this.props.autocomplete}
                      aria-labelledby={this.props.labelId}
                      value={opt.value}
                      checked={this.state.value.indexOf(opt.value) > -1}
@@ -63,6 +64,7 @@ CheckboxOptionsInput.defaultProps = {
   name     : '',
   value    : [],
   options  : [],
+  autocomplete: '',
   onChange : () => {},
   onBlur   : () => {}
 };

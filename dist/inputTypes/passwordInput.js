@@ -36,6 +36,7 @@ var PasswordInput = (function (_React$Component) {
       return React.createElement('input', { type: 'password',
         name: this.props.name,
         id: this.props.id,
+        autocomplete: this.props.autocomplete,
         'aria-labelledby': this.props.labelId,
         className: this.props.classes.input,
         placeholder: this.props.placeholder,
@@ -58,6 +59,7 @@ PasswordInput.defaultProps = {
   id: '',
   value: '',
   placeholder: '',
+  autocomplete: '',
   onChange: function onChange() {},
   onBlur: function onBlur() {},
   onKeyDown: function onKeyDown() {}

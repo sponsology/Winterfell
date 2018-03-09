@@ -47,6 +47,7 @@ var SelectInput = (function (_React$Component) {
         { name: this.props.name,
           id: this.props.id,
           className: this.props.classes.select,
+          autocomplete: this.props.autocomplete,
           value: this.state.value,
           ref: 'select',
           required: this.props.required ? 'required' : undefined,
@@ -81,6 +82,7 @@ SelectInput.defaultProps = {
   id: '',
   value: '',
   options: [],
+  autocomplete: '',
   onChange: function onChange() {},
   onBlur: function onBlur() {}
 };

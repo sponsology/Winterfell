@@ -62,6 +62,7 @@ var PrivacyInput = (function (_React$Component) {
             id: this.props.labelId },
           React.createElement('input', { type: 'checkbox',
             name: this.props.name,
+            autocomplete: this.props.autocomplete,
             'aria-labelledby': this.props.labelId,
             className: this.props.classes.checkbox,
             defaultChecked: this.state.checked,
@@ -96,6 +97,7 @@ PrivacyInput.defaultProps = {
   defaultChecked: false,
   classes: {},
   name: '',
+  autocomplete: '',
   value: '',
   onChange: function onChange() {},
   onBlur: function onBlur() {}

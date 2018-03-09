@@ -50,6 +50,7 @@ var RadioOptionsInput = (function (_React$Component) {
               React.createElement('input', { type: 'radio',
                 name: _this.props.name,
                 'aria-labelledby': _this.props.labelId,
+                autocomplete: _this.props.autocomplete,
                 checked: _this.state.value == opt.value,
                 className: _this.props.classes.radio,
                 required: _this.props.required ? 'required' : undefined,
@@ -72,6 +73,7 @@ RadioOptionsInput.defaultProps = {
   classes: {},
   name: '',
   value: '',
+  autocomplete: '',
   options: [],
   onChange: function onChange() {},
   onBlur: function onBlur() {}

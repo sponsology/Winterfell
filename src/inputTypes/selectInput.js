@@ -28,6 +28,7 @@ class SelectInput extends React.Component {
       <select name={this.props.name}
               id={this.props.id}
               className={this.props.classes.select}
+              autocomplete={this.props.autocomplete}
               value={this.state.value}
               ref="select"
               required={this.props.required
@@ -60,6 +61,7 @@ SelectInput.defaultProps = {
   id          : '',
   value       : '',
   options     : [],
+  autocomplete: '',
   onChange    : () => {},
   onBlur      : () => {}
 };

@@ -39,6 +39,7 @@ var TextareaInput = (function (_React$Component) {
         'aria-labelledby': this.props.labelId,
         className: this.props.classes.input,
         placeholder: this.props.placeholder,
+        autocomplete: this.props.autocomplete,
         value: this.state.value,
         required: this.props.required ? 'required' : undefined,
         onChange: this.handleChange.bind(this),
@@ -57,6 +58,7 @@ TextareaInput.defaultProps = {
   id: '',
   value: '',
   placeholder: '',
+  autocomplete: '',
   onChange: function onChange() {},
   onBlur: function onBlur() {}
 };

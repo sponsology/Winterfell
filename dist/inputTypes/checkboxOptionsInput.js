@@ -61,6 +61,7 @@ var CheckboxOptionsInput = (function (_React$Component) {
                 id: _this.props.labelId },
               React.createElement('input', { type: 'checkbox',
                 name: _this.props.name,
+                autocomplete: _this.props.autocomplete,
                 'aria-labelledby': _this.props.labelId,
                 value: opt.value,
                 checked: _this.state.value.indexOf(opt.value) > -1,
@@ -86,6 +87,7 @@ CheckboxOptionsInput.defaultProps = {
   name: '',
   value: [],
   options: [],
+  autocomplete: '',
   onChange: function onChange() {},
   onBlur: function onBlur() {}
 };
