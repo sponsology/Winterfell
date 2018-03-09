@@ -31,6 +31,7 @@ var QuestionSet = (function (_React$Component) {
         return React.createElement(Question, { key: question.questionId,
           questionSetId: _this.props.id,
           questionId: question.questionId,
+          autoComplete: question.autoComplete,
           question: question.question,
           validateOn: question.validateOn,
           validations: question.validations,
