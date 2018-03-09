@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist",
+    "build:examples": "gulp build-examples",
     "build": "babel src --out-dir dist && webpack",
     "prepublish": "npm run clean && npm run build"
   },
@@ -33,9 +34,9 @@
     "babelify": "^6.3.0",
     "keycodez": "^1.0.0",
     "lodash": "^3.10.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
     "react-progress-button": "^5.1.0",
+    "react": ">= 16.2.0 < 17.0.0-0",
+    "react-dom": ">= 16.2.0 < 17.0.0-0",
     "validator": "https://github.com/sponsology/validator.js/tarball/b8a18eb8b422ab3c848d936ffba9444e0a01772a"
   },
   "devDependencies": {
@@ -45,8 +46,6 @@
     "browserify": "^11.0.1",
     "gulp": "^3.9.0",
     "gulp-uglify": "^1.2.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
     "rimraf": "^2.4.3",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
