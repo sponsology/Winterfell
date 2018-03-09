@@ -128,6 +128,7 @@ class Question extends React.Component {
         {validationErrors}
         <Input name={this.props.questionId}
                id={this.props.questionId}
+               autocomplete={this.props.autocomplete}
                labelId={labelId}
                value={value}
                text={this.props.input.text}
@@ -179,6 +180,7 @@ Question.defaultProps = {
   text                   : undefined,
   postText               : undefined,
   value                  : undefined,
+  autocomplete           : '',
   input                  : {
     default     : undefined,
     type        : 'textInput',
