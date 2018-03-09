@@ -57,6 +57,7 @@ class Question extends React.Component {
                 <Question key={conditionalQuestion.questionId}
                           questionSetId={this.props.questionSetId}
                           questionId={conditionalQuestion.questionId}
+                          autocomplete={conditionalQuestion.autocomplete}
                           question={conditionalQuestion.question}
                           text={conditionalQuestion.text}
                           postText={conditionalQuestion.postText}
@@ -180,7 +181,7 @@ Question.defaultProps = {
   text                   : undefined,
   postText               : undefined,
   value                  : undefined,
-  autocomplete           : '',
+  autocomplete           : undefined,
   input                  : {
     default     : undefined,
     type        : 'textInput',
