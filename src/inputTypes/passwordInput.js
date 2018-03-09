@@ -21,7 +21,7 @@ class PasswordInput extends React.Component {
       <input type="password"
              name={this.props.name}
              id={this.props.id}
-             autocomplete={this.props.autocomplete}
+             autoComplete={this.props.autoComplete}
              aria-labelledby={this.props.labelId}
              className={this.props.classes.input}
              placeholder={this.props.placeholder}
@@ -43,7 +43,7 @@ PasswordInput.defaultProps = {
   id          : '',
   value       : '',
   placeholder : '',
-  autocomplete: '',
+  autoComplete: '',
   onChange    : () => {},
   onBlur      : () => {},
   onKeyDown   : () => {}

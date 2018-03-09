@@ -40,7 +40,7 @@ class PrivacyInput extends React.Component {
                id={this.props.labelId}>
           <input type="checkbox"
                  name={this.props.name}
-                 autocomplete={this.props.autocomplete}
+                 autoComplete={this.props.autoComplete}
                  aria-labelledby={this.props.labelId}
                  className={this.props.classes.checkbox}
                  defaultChecked={this.state.checked}
@@ -67,7 +67,7 @@ PrivacyInput.defaultProps = {
   defaultChecked: false,
   classes  : {},
   name     : '',
-  autocomplete: '',
+  autoComplete: '',
   value    : '',
   onChange : () => {},
   onBlur   : () => {}

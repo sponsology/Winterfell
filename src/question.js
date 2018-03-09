@@ -57,7 +57,7 @@ class Question extends React.Component {
                 <Question key={conditionalQuestion.questionId}
                           questionSetId={this.props.questionSetId}
                           questionId={conditionalQuestion.questionId}
-                          autocomplete={conditionalQuestion.autocomplete}
+                          autoComplete={conditionalQuestion.autoComplete}
                           question={conditionalQuestion.question}
                           text={conditionalQuestion.text}
                           postText={conditionalQuestion.postText}
@@ -129,7 +129,7 @@ class Question extends React.Component {
         {validationErrors}
         <Input name={this.props.questionId}
                id={this.props.questionId}
-               autocomplete={this.props.autocomplete}
+               autoComplete={this.props.autoComplete}
                labelId={labelId}
                value={value}
                text={this.props.input.text}
@@ -181,7 +181,7 @@ Question.defaultProps = {
   text                   : undefined,
   postText               : undefined,
   value                  : undefined,
-  autocomplete           : undefined,
+  autoComplete           : undefined,
   input                  : {
     default     : undefined,
     type        : 'textInput',

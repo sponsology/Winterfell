@@ -21,7 +21,7 @@ class EmailInput extends React.Component {
       <input type="email"
              name={this.props.name}
              id={this.props.id}
-             autocomplete={this.props.autocomplete}
+             autoComplete={this.props.autoComplete}
              aria-labelledby={this.props.labelId}
              className={this.props.classes.input}
              placeholder={this.props.placeholder}
@@ -43,7 +43,7 @@ EmailInput.defaultProps = {
   id          : '',
   value       : '',
   placeholder : '',
-  autocomplete: '',
+  autoComplete: '',
   onChange    : () => {},
   onBlur      : () => {},
   onKeyDown   : () => {}

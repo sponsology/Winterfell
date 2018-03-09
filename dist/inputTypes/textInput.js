@@ -35,7 +35,7 @@ var TextInput = (function (_React$Component) {
     value: function render() {
       return React.createElement('input', { type: 'text',
         name: this.props.name,
-        autocomplete: this.props.autocomplete,
+        autoComplete: this.props.autoComplete,
         id: this.props.id,
         'aria-labelledby': this.props.labelId,
         className: this.props.classes.input,
@@ -59,7 +59,7 @@ TextInput.defaultProps = {
   id: '',
   value: '',
   placeholder: '',
-  autocomplete: '',
+  autoComplete: '',
   onChange: function onChange() {},
   onBlur: function onBlur() {},
   onKeyDown: function onKeyDown() {}

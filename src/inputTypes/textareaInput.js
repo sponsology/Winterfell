@@ -24,7 +24,7 @@ class TextareaInput extends React.Component {
                 aria-labelledby={this.props.labelId}
                 className={this.props.classes.input}
                 placeholder={this.props.placeholder}
-                autocomplete={this.props.autocomplete}
+                autoComplete={this.props.autoComplete}
                 value={this.state.value}
                 required={this.props.required
                             ? 'required'
@@ -42,7 +42,7 @@ TextareaInput.defaultProps = {
   id          : '',
   value       : '',
   placeholder : '',
-  autocomplete: '',
+  autoComplete: '',
   onChange    : () => {},
   onBlur      : () => {}
 };
