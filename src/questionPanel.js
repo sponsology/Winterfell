@@ -21,6 +21,7 @@ class QuestionPanel extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     this.setState({
+      validationErrors: nextProps.validationErrors,
       buttonState     : nextProps.buttonState
     });
   }
@@ -61,6 +62,7 @@ class QuestionPanel extends React.Component {
   }
 
   handleMainButtonClick() {
+    console.log("Handling main mutton ")
     var action     = this.props.action.default;
     var conditions = this.props.action.conditions || [];
 
@@ -73,7 +75,7 @@ class QuestionPanel extends React.Component {
     var questionSets   = _.chain(this.props.schema.questionSets)
                           .filter(qS => questionSetIds.indexOf(qS.questionSetId) > -1)
                           .value();
-
+    console.log("About to validate")
     /*
      * Get any incorrect fields that need error messages.
      */

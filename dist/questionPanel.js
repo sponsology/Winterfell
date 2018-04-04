@@ -36,6 +36,7 @@ var QuestionPanel = (function (_React$Component) {
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
       this.setState({
+        validationErrors: nextProps.validationErrors,
         buttonState: nextProps.buttonState
       });
     }
@@ -76,6 +77,7 @@ var QuestionPanel = (function (_React$Component) {
     value: function handleMainButtonClick() {
       var _this2 = this;
 
+      console.log("Handling main mutton ");
       var action = this.props.action['default'];
       var conditions = this.props.action.conditions || [];
 
@@ -90,7 +92,7 @@ var QuestionPanel = (function (_React$Component) {
       var questionSets = _.chain(this.props.schema.questionSets).filter(function (qS) {
         return questionSetIds.indexOf(qS.questionSetId) > -1;
       }).value();
-
+      console.log("About to validate");
       /*
        * Get any incorrect fields that need error messages.
        */
