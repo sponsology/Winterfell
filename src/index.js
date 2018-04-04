@@ -116,7 +116,7 @@ class Winterfell extends React.Component {
 
   handleSubmit(action) {
     if (this.props.disableSubmit) {
-      this.props.onSubmit(this.state.questionAnswers, action);
+      this.props.onSubmit(this.state.questionAnswers, action, this.refs.panel);
       return;
     }
 
@@ -164,7 +164,8 @@ class Winterfell extends React.Component {
                          onPanelBack={this.handleBackButtonClick.bind(this)}
                          onSwitchPanel={this.handleSwitchPanel.bind(this)}
                          onSubmit={this.handleSubmit.bind(this)}
-                         buttonState = {this.state.buttonState} />
+                         buttonState = {this.state.buttonState}
+                          ref="panel" />
         </div>
       </form>
     );
