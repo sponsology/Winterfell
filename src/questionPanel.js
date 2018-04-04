@@ -19,7 +19,7 @@ class QuestionPanel extends React.Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {    
+  componentWillReceiveProps(nextProps) {
     this.setState({
       buttonState     : nextProps.buttonState
     });
@@ -237,7 +237,7 @@ class QuestionPanel extends React.Component {
                 <Button text={this.props.button.text}
                         onClick={this.handleMainButtonClick.bind(this)}
                         className={this.props.classes.controlButton}
-                        buttonState={this.state.buttonState} />
+                        buttonState={this.props.buttonState} />
               )
             : undefined}
         </div>

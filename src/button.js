@@ -2,11 +2,10 @@ var React = require('react');
 import ProgressButton from 'react-progress-button'
 
 class Button extends React.Component {
-  constructor(props){
+  /*constructor(props){
     super(props)
-    console.log("Button props", props)
     this.state = {buttonState: props.buttonState}
-  }
+  }*/
 
   handleClick(e) {
     e.preventDefault();
@@ -14,7 +13,6 @@ class Button extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    //console.log("NextProps" , nextProps);
     this.setState({
       buttonState     : nextProps.buttonState
     });
@@ -23,6 +21,7 @@ class Button extends React.Component {
   render() {
     return (
       <ProgressButton href="#"
+         controlled={true}
          state={this.state.buttonState}
          onClick={this.handleClick.bind(this)}>
         {this.props.text}

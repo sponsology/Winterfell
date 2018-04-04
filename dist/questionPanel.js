@@ -243,7 +243,7 @@ var QuestionPanel = (function (_React$Component) {
           !this.props.button.disabled ? React.createElement(Button, { text: this.props.button.text,
             onClick: this.handleMainButtonClick.bind(this),
             className: this.props.classes.controlButton,
-            buttonState: this.state.buttonState }) : undefined
+            buttonState: this.props.buttonState }) : undefined
         )
       );
     }

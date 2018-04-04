@@ -19,16 +19,20 @@ var React = require('react');
 var Button = (function (_React$Component) {
   _inherits(Button, _React$Component);
 
-  function Button(props) {
+  function Button() {
     _classCallCheck(this, Button);
 
-    _get(Object.getPrototypeOf(Button.prototype), 'constructor', this).call(this, props);
-    console.log("Button props", props);
-    this.state = { buttonState: props.buttonState };
+    _get(Object.getPrototypeOf(Button.prototype), 'constructor', this).apply(this, arguments);
   }
 
   _createClass(Button, [{
     key: 'handleClick',
+
+    /*constructor(props){
+      super(props)
+      this.state = {buttonState: props.buttonState}
+    }*/
+
     value: function handleClick(e) {
       e.preventDefault();
       this.props.onClick();
@@ -36,7 +40,6 @@ var Button = (function (_React$Component) {
   }, {
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
-      //console.log("NextProps" , nextProps);
       this.setState({
         buttonState: nextProps.buttonState
       });
@@ -47,6 +50,7 @@ var Button = (function (_React$Component) {
       return React.createElement(
         _reactProgressButton2['default'],
         { href: '#',
+          controlled: true,
           state: this.state.buttonState,
           onClick: this.handleClick.bind(this) },
         this.props.text
