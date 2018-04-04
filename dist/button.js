@@ -46,6 +46,7 @@ var Button = (function (_React$Component) {
         _reactProgressButton2['default'],
         { href: '#',
           state: this.state.buttonState,
+          controlled: true,
           onClick: this.handleClick.bind(this) },
         this.props.text
       );
