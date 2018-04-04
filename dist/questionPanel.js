@@ -95,7 +95,7 @@ var QuestionPanel = (function (_React$Component) {
        * Get any incorrect fields that need error messages.
        */
       var invalidQuestions = Validation.getQuestionPanelInvalidQuestions(questionSets, this.props.questionAnswers);
-
+      console.log("Panel validation: ", invalidQuestions);
       /*
        * If the panel isn't valid...
        */

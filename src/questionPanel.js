@@ -80,7 +80,7 @@ class QuestionPanel extends React.Component {
     var invalidQuestions = Validation.getQuestionPanelInvalidQuestions(
       questionSets, this.props.questionAnswers
     );
-
+    console.log("Panel validation: ", invalidQuestions)
     /*
      * If the panel isn't valid...
      */
