@@ -108,7 +108,7 @@ var QuestionPanel = (function (_React$Component) {
             };
           });
         });
-
+        console.log("After validation, the state is ", validationErrors);
         this.setState({
           validationErrors: validationErrors,
           buttonState: 'error'
