@@ -41,8 +41,6 @@ var validateAnswer = (value, validationItem, questionAnswers) => {
                                ? Validator[validationItem.type]
                                : undefined;
 
-  console.log("Validating " + value + " agianst " + validationItem)
-
   if (!validationMethod) {
     throw new Error('Winterfell: Attempted to validate for undefined method "'
                     + validationItem.type + '"');
@@ -75,9 +73,7 @@ var validateAnswer = (value, validationItem, questionAnswers) => {
    * Return the result of the validation method running
    * wtih the validationParameters.
    */
-   console.log("Returning ", validationMethod.apply(null, validationParameters))
   return validationMethod.apply(null, validationParameters);
-
 };
 
 /**
@@ -155,7 +151,7 @@ var getQuestionPanelInvalidQuestions = (questionSets, questionAnswers) => {
                              return question.validations instanceof Array
                                       && question.validations.length > 0;
                            });
-  console.log("questions to check ", questionsToCheck)
+
   /*
    * Now we run validations for the questions
    * we need to check for errors.

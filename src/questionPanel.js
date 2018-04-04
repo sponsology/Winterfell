@@ -75,14 +75,12 @@ class QuestionPanel extends React.Component {
     var questionSets   = _.chain(this.props.schema.questionSets)
                           .filter(qS => questionSetIds.indexOf(qS.questionSetId) > -1)
                           .value();
-    console.log("About to validate")
     /*
      * Get any incorrect fields that need error messages.
      */
     var invalidQuestions = Validation.getQuestionPanelInvalidQuestions(
       questionSets, this.props.questionAnswers
     );
-    console.log("Panel validation: ", invalidQuestions)
     /*
      * If the panel isn't valid...
      */
@@ -95,7 +93,6 @@ class QuestionPanel extends React.Component {
           };
         })
       });
-      console.log("After validation, the state is ", validationErrors)
       this.setState({
         validationErrors : validationErrors,
         buttonState      : 'error'
@@ -239,7 +236,7 @@ class QuestionPanel extends React.Component {
                 <Button text={this.props.button.text}
                         onClick={this.handleMainButtonClick.bind(this)}
                         className={this.props.classes.controlButton}
-                        buttonState={this.props.buttonState} />
+                        buttonState={this.state.buttonState} />
               )
             : undefined}
         </div>

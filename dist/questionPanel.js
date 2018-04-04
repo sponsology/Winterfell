@@ -92,12 +92,10 @@ var QuestionPanel = (function (_React$Component) {
       var questionSets = _.chain(this.props.schema.questionSets).filter(function (qS) {
         return questionSetIds.indexOf(qS.questionSetId) > -1;
       }).value();
-      console.log("About to validate");
       /*
        * Get any incorrect fields that need error messages.
        */
       var invalidQuestions = Validation.getQuestionPanelInvalidQuestions(questionSets, this.props.questionAnswers);
-      console.log("Panel validation: ", invalidQuestions);
       /*
        * If the panel isn't valid...
        */
@@ -110,7 +108,6 @@ var QuestionPanel = (function (_React$Component) {
             };
           });
         });
-        console.log("After validation, the state is ", validationErrors);
         this.setState({
           validationErrors: validationErrors,
           buttonState: 'error'
@@ -245,7 +242,7 @@ var QuestionPanel = (function (_React$Component) {
           !this.props.button.disabled ? React.createElement(Button, { text: this.props.button.text,
             onClick: this.handleMainButtonClick.bind(this),
             className: this.props.classes.controlButton,
-            buttonState: this.props.buttonState }) : undefined
+            buttonState: this.state.buttonState }) : undefined
         )
       );
     }

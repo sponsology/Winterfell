@@ -38,8 +38,6 @@ var extraValidators = {
 var validateAnswer = function validateAnswer(value, validationItem, questionAnswers) {
   var validationMethod = typeof extraValidators[validationItem.type] !== 'undefined' ? extraValidators[validationItem.type] : Validator.hasOwnProperty(validationItem.type) && typeof Validator[validationItem.type] === 'function' ? Validator[validationItem.type] : undefined;
 
-  console.log("Validating " + value + " agianst " + validationItem);
-
   if (!validationMethod) {
     throw new Error('Winterfell: Attempted to validate for undefined method "' + validationItem.type + '"');
   }
@@ -69,7 +67,6 @@ var validateAnswer = function validateAnswer(value, validationItem, questionAnsw
    * Return the result of the validation method running
    * wtih the validationParameters.
    */
-  console.log("Returning ", validationMethod.apply(null, validationParameters));
   return validationMethod.apply(null, validationParameters);
 };
 
@@ -135,7 +132,7 @@ var getQuestionPanelInvalidQuestions = function getQuestionPanelInvalidQuestions
   var questionsToCheck = getActiveQuestionsFromQuestionSets(questionSets, questionAnswers).filter(function (question) {
     return question.validations instanceof Array && question.validations.length > 0;
   });
-  console.log("questions to check ", questionsToCheck);
+
   /*
    * Now we run validations for the questions
    * we need to check for errors.
