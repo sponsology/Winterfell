@@ -77,7 +77,10 @@ var QuestionPanel = (function (_React$Component) {
     value: function handleMainButtonClick() {
       var _this2 = this;
 
-      console.log("Handling main mutton ");
+      this.setState({
+        validationErrors: [],
+        buttonState: 'loading'
+      });
       var action = this.props.action['default'];
       var conditions = this.props.action.conditions || [];
 

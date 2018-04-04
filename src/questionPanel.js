@@ -62,7 +62,10 @@ class QuestionPanel extends React.Component {
   }
 
   handleMainButtonClick() {
-    console.log("Handling main mutton ")
+    this.setState({
+      validationErrors : [],
+      buttonState      : 'loading'
+    });
     var action     = this.props.action.default;
     var conditions = this.props.action.conditions || [];
 
