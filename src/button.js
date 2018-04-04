@@ -2,10 +2,10 @@ var React = require('react');
 import ProgressButton from 'react-progress-button'
 
 class Button extends React.Component {
-  /*constructor(props){
+  constructor(props){
     super(props)
     this.state = {buttonState: props.buttonState}
-  }*/
+  }
 
   handleClick(e) {
     e.preventDefault();

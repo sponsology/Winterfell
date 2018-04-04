@@ -19,20 +19,15 @@ var React = require('react');
 var Button = (function (_React$Component) {
   _inherits(Button, _React$Component);
 
-  function Button() {
+  function Button(props) {
     _classCallCheck(this, Button);
 
-    _get(Object.getPrototypeOf(Button.prototype), 'constructor', this).apply(this, arguments);
+    _get(Object.getPrototypeOf(Button.prototype), 'constructor', this).call(this, props);
+    this.state = { buttonState: props.buttonState };
   }
 
   _createClass(Button, [{
     key: 'handleClick',
-
-    /*constructor(props){
-      super(props)
-      this.state = {buttonState: props.buttonState}
-    }*/
-
     value: function handleClick(e) {
       e.preventDefault();
       this.props.onClick();
