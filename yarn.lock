@@ -188,6 +188,10 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
 
+au-bn-validator@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/au-bn-validator/-/au-bn-validator-1.2.2.tgz#93bef56edb7c4c5b93965f50c4ebaba4a75a6702"
+
 aws-sign2@~0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/aws-sign2/-/aws-sign2-0.6.0.tgz#14342dd38dbcc94d0e5b87d763cd63612c0e794f"
@@ -3182,9 +3186,11 @@ v8flags@^2.0.2:
   dependencies:
     user-home "^1.1.1"
 
-"validator@https://github.com/sponsology/validator.js/tarball/b8a18eb8b422ab3c848d936ffba9444e0a01772a":
+"validator@https://github.com/sponsology/validator.js/tarball/25db5f9a898f8419f48120510a2d0b182cc76d27":
   version "9.1.1"
-  resolved "https://github.com/sponsology/validator.js/tarball/b8a18eb8b422ab3c848d936ffba9444e0a01772a#5bf3f195afd7ccc3db2629025bde61d5b3f222d0"
+  resolved "https://github.com/sponsology/validator.js/tarball/25db5f9a898f8419f48120510a2d0b182cc76d27#7ca09d4057ebfd82e3c17a1fd1e1c03ddb6ce52c"
+  dependencies:
+    au-bn-validator "^1.2.2"
 
 verror@1.10.0:
   version "1.10.0"

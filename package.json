@@ -36,7 +36,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-progress-button": "^5.1.0",
-    "validator": "https://github.com/sponsology/validator.js/tarball/b8a18eb8b422ab3c848d936ffba9444e0a01772a"
+    "validator": "https://github.com/sponsology/validator.js/tarball/25db5f9a898f8419f48120510a2d0b182cc76d27"
   },
   "devDependencies": {
     "babel": "^5.8.23",

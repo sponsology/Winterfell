@@ -41,6 +41,11 @@ var errorMessages = {
   isEmail        : 'Please enter a valid email address',
 
   /*
+   * Valid ABN
+   */
+  isABN          : 'Please enter a valid ABN',
+
+  /*
    * String contains seed
    */
   contains       : (validationItem) => {
