@@ -22,8 +22,6 @@ class RadioOptionsInput extends React.Component {
         {this.props.options.map(opt =>
           <li key={opt.value}
               className={this.props.classes.radioListItem}>
-            <label className={this.props.classes.radioLabel}
-                   id={this.props.labelId} for={'id-' + opt.value}>
               <input type="radio"
                      name={this.props.name}
                      aria-labelledby={this.props.labelId}
@@ -36,6 +34,9 @@ class RadioOptionsInput extends React.Component {
                                  : undefined}
                      onChange={this.handleChange.bind(this, opt.value)}
                      onBlur={this.props.onBlur.bind(null, this.state.value)} />
+            <label className={this.props.classes.radioLabel}
+                   id={this.props.labelId} for={'id-' + opt.value}>
+
               {opt.text}
             </label>
           </li>
