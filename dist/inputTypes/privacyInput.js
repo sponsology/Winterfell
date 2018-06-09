@@ -50,7 +50,7 @@ var PrivacyInput = (function (_React$Component) {
     value: function render() {
       return React.createElement(
         'div',
-        { className: this.props.classes.privacyInput },
+        { className: this.props.classes.checkboxListItem },
         React.createElement(
           'p',
           null,

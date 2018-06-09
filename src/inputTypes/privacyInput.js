@@ -34,7 +34,7 @@ class PrivacyInput extends React.Component {
 
   render() {
     return (
-      <div className={this.props.classes.privacyInput}>
+      <div className={this.props.classes.checkboxListItem}>
         <p>Welcome. You are about to set up your Account and Profile with our community.  Your Profile will be comprehensive to optimise your matches.  You can save this form as you go.</p>
           <input type="checkbox"
                  name={this.props.name}
