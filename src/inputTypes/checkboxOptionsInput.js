@@ -35,8 +35,6 @@ class CheckboxOptionsInput extends React.Component {
         {this.props.options.map(opt =>
           <li key={opt.value}
               className={this.props.classes.checkboxListItem}>
-            <label className={this.props.classes.checkboxLabel}
-                   id={this.props.labelId}>
               <input type="checkbox"
                      name={this.props.name}
                      autoComplete={this.props.autoComplete}
@@ -49,6 +47,9 @@ class CheckboxOptionsInput extends React.Component {
                                  : undefined}
                      onChange={this.handleChange.bind(this, opt.value)}
                      onBlur={this.props.onBlur.bind(null, this.state.value)} />
+            <label className={this.props.classes.checkboxLabel}
+                   id={this.props.labelId}>
+
               {opt.text}
             </label>
           </li>
