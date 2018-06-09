@@ -23,11 +23,11 @@ class RadioOptionsInput extends React.Component {
           <li key={opt.value}
               className={this.props.classes.radioListItem}>
             <label className={this.props.classes.radioLabel}
-                   id={this.props.labelId} for="id-{opt.value}">
+                   id={this.props.labelId} for={'id-' + opt.value}>
               <input type="radio"
                      name={this.props.name}
                      aria-labelledby={this.props.labelId}
-                     id="id-{opt.value}"
+                     id={'id-' + opt.value}
                      autoComplete={this.props.autoComplete}
                      checked={this.state.value == opt.value}
                      className={this.props.classes.radio}
