@@ -52,7 +52,7 @@ class CheckboxInput extends React.Component {
                                                       : undefined))} />
         <label className={this.props.classes.checkboxLabel}
                id={this.props.labelId}
-               for={'id-' + opt.value}>
+               htmlFor={'id-' + opt.value}>
 
           {this.props.text}
         </label>

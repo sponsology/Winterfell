@@ -38,7 +38,7 @@ class PrivacyInput extends React.Component {
         <p>Welcome. You are about to set up your Account and Profile with our community.  Your Profile will be comprehensive to optimise your matches.  You can save this form as you go.</p>
           <input type="checkbox"
                  name={this.props.name}
-                 id={'id-' + opt.value}
+                 id='id-privacy'
                  autoComplete={this.props.autoComplete}
                  aria-labelledby={this.props.labelId}
                  className={this.props.classes.checkbox}
@@ -51,7 +51,7 @@ class PrivacyInput extends React.Component {
                                                         : undefined))} />
           <label className={this.props.classes.privacyLabel}
                id={this.props.labelId}
-               for={'id-' + opt.value}>
+               htmlFor='id-privacy'>
 
           By checking this box, I agree to the terms of the&nbsp;
           <a href="/privacy-policy">Privacy Policy</a>

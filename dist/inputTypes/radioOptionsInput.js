@@ -56,7 +56,7 @@ var RadioOptionsInput = (function (_React$Component) {
             React.createElement(
               'label',
               { className: _this.props.classes.radioLabel,
-                id: _this.props.labelId, 'for': 'id-' + opt.value },
+                id: _this.props.labelId, htmlFor: 'id-' + opt.value },
               opt.text
             )
           );

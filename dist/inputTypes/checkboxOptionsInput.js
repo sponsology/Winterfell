@@ -70,7 +70,7 @@ var CheckboxOptionsInput = (function (_React$Component) {
               'label',
               { className: _this.props.classes.checkboxLabel,
                 id: _this.props.labelId,
-                'for': 'id-' + opt.value },
+                htmlFor: 'id-' + opt.value },
               opt.text
             )
           );

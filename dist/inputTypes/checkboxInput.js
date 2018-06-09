@@ -66,7 +66,7 @@ var CheckboxInput = (function (_React$Component) {
           'label',
           { className: this.props.classes.checkboxLabel,
             id: this.props.labelId,
-            'for': 'id-' + opt.value },
+            htmlFor: 'id-' + opt.value },
           this.props.text
         )
       );

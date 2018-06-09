@@ -50,7 +50,7 @@ class CheckboxOptionsInput extends React.Component {
                      onBlur={this.props.onBlur.bind(null, this.state.value)} />
             <label className={this.props.classes.checkboxLabel}
                    id={this.props.labelId}
-                   for={'id-' + opt.value}>
+                   htmlFor={'id-' + opt.value}>
 
               {opt.text}
             </label>

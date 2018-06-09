@@ -58,7 +58,7 @@ var PrivacyInput = (function (_React$Component) {
         ),
         React.createElement('input', { type: 'checkbox',
           name: this.props.name,
-          id: 'id-' + opt.value,
+          id: 'id-privacy',
           autoComplete: this.props.autoComplete,
           'aria-labelledby': this.props.labelId,
           className: this.props.classes.checkbox,
@@ -71,7 +71,7 @@ var PrivacyInput = (function (_React$Component) {
           'label',
           { className: this.props.classes.privacyLabel,
             id: this.props.labelId,
-            'for': 'id-' + opt.value },
+            htmlFor: 'id-privacy' },
           'By checking this box, I agree to the terms of the ',
           React.createElement(
             'a',
