@@ -69,7 +69,7 @@ var PrivacyInput = (function (_React$Component) {
           onBlur: this.props.onBlur.bind(null, this.state.checked ? this.props.value : undefined) }),
         React.createElement(
           'label',
-          { className: this.props.classes.privacyLabel,
+          { className: this.props.classes.checkboxLabel,
             id: this.props.labelId,
             htmlFor: 'id-privacy' },
           'By checking this box, I agree to the terms of the ',

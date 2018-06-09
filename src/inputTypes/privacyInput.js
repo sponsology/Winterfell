@@ -49,7 +49,7 @@ class PrivacyInput extends React.Component {
                  onBlur={this.props.onBlur.bind(null, (this.state.checked
                                                         ? this.props.value
                                                         : undefined))} />
-          <label className={this.props.classes.privacyLabel}
+          <label className={this.props.classes.checkboxLabel}
                id={this.props.labelId}
                htmlFor='id-privacy'>
 
