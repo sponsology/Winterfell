@@ -36,10 +36,9 @@ class PrivacyInput extends React.Component {
     return (
       <div className={this.props.classes.privacyInput}>
         <p>Welcome. You are about to set up your Account and Profile with our community.  Your Profile will be comprehensive to optimise your matches.  You can save this form as you go.</p>
-        <label className={this.props.classes.privacyLabel}
-               id={this.props.labelId}>
           <input type="checkbox"
                  name={this.props.name}
+                 id={'id-' + opt.value}
                  autoComplete={this.props.autoComplete}
                  aria-labelledby={this.props.labelId}
                  className={this.props.classes.checkbox}
@@ -50,6 +49,10 @@ class PrivacyInput extends React.Component {
                  onBlur={this.props.onBlur.bind(null, (this.state.checked
                                                         ? this.props.value
                                                         : undefined))} />
+          <label className={this.props.classes.privacyLabel}
+               id={this.props.labelId}
+               for={'id-' + opt.value}>
+
           By checking this box, I agree to the terms of the&nbsp;
           <a href="/privacy-policy">Privacy Policy</a>
           , and the&nbsp;
