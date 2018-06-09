@@ -37,6 +37,7 @@ class CheckboxOptionsInput extends React.Component {
               className={this.props.classes.checkboxListItem}>
               <input type="checkbox"
                      name={this.props.name}
+                     id={'id-' + opt.value}
                      autoComplete={this.props.autoComplete}
                      aria-labelledby={this.props.labelId}
                      value={opt.value}
@@ -48,7 +49,8 @@ class CheckboxOptionsInput extends React.Component {
                      onChange={this.handleChange.bind(this, opt.value)}
                      onBlur={this.props.onBlur.bind(null, this.state.value)} />
             <label className={this.props.classes.checkboxLabel}
-                   id={this.props.labelId}>
+                   id={this.props.labelId}
+                   for={'id-' + opt.value}>
 
               {opt.text}
             </label>

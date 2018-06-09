@@ -57,6 +57,7 @@ var CheckboxOptionsInput = (function (_React$Component) {
               className: _this.props.classes.checkboxListItem },
             React.createElement('input', { type: 'checkbox',
               name: _this.props.name,
+              id: 'id-' + opt.value,
               autoComplete: _this.props.autoComplete,
               'aria-labelledby': _this.props.labelId,
               value: opt.value,
@@ -68,7 +69,8 @@ var CheckboxOptionsInput = (function (_React$Component) {
             React.createElement(
               'label',
               { className: _this.props.classes.checkboxLabel,
-                id: _this.props.labelId },
+                id: _this.props.labelId,
+                'for': 'id-' + opt.value },
               opt.text
             )
           );

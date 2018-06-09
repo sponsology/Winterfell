@@ -35,22 +35,25 @@ class CheckboxInput extends React.Component {
   render() {
     return (
       <div className={this.props.classes.checkboxInput}>
+        <input type="checkbox"
+               name={this.props.name}
+               id={'id-' + opt.value}
+               autoComplete={this.props.autoComplete}
+               aria-labelledby={this.props.labelId}
+               className={this.props.classes.checkbox}
+               defaultChecked={this.state.checked}
+               value={this.props.value}
+               required={this.props.required
+                           ? 'required'
+                           : undefined}
+               onChange={this.handleChange.bind(this)}
+               onBlur={this.props.onBlur.bind(null, (this.state.checked
+                                                      ? this.props.value
+                                                      : undefined))} />
         <label className={this.props.classes.checkboxLabel}
-               id={this.props.labelId}>
-          <input type="checkbox"
-                 name={this.props.name}
-                 autoComplete={this.props.autoComplete}
-                 aria-labelledby={this.props.labelId}
-                 className={this.props.classes.checkbox}
-                 defaultChecked={this.state.checked}
-                 value={this.props.value}
-                 required={this.props.required
-                             ? 'required'
-                             : undefined}
-                 onChange={this.handleChange.bind(this)}
-                 onBlur={this.props.onBlur.bind(null, (this.state.checked
-                                                        ? this.props.value
-                                                        : undefined))} />
+               id={this.props.labelId}
+               for={'id-' + opt.value}>
+
           {this.props.text}
         </label>
       </div>
