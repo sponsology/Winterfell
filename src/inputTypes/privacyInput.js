@@ -35,7 +35,7 @@ class PrivacyInput extends React.Component {
   render() {
     return (
       <div className={this.props.classes.checkboxListItem}>
-        <p>Welcome. You are about to set up your Account and Profile with our community.  Your Profile will be comprehensive to optimise your matches.  You can save this form as you go.</p>
+        <p>You have set up your Account details.  Now you will step through setting up your Profile to find sponsorship alignment opportunities with Givers.  Next step is payment of your annual subscription.</p>
           <input type="checkbox"
                  name={this.props.name}
                  id='id-privacy'
@@ -53,7 +53,7 @@ class PrivacyInput extends React.Component {
                id={this.props.labelId}
                htmlFor='id-privacy'>
 
-          By checking this box, I agree to the terms of the&nbsp;
+          by checking this box, I agree to the terms of the&nbsp;
           <a href="/privacy-policy">Privacy Policy</a>
           , and the&nbsp;
           <a href="/terms">Terms and Conditions</a>

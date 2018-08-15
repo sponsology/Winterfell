@@ -54,7 +54,7 @@ var PrivacyInput = (function (_React$Component) {
         React.createElement(
           'p',
           null,
-          'Welcome. You are about to set up your Account and Profile with our community.  Your Profile will be comprehensive to optimise your matches.  You can save this form as you go.'
+          'You have set up your Account details.  Now you will step through setting up your Profile to find sponsorship alignment opportunities with Givers.  Next step is payment of your annual subscription.'
         ),
         React.createElement('input', { type: 'checkbox',
           name: this.props.name,
@@ -72,7 +72,7 @@ var PrivacyInput = (function (_React$Component) {
           { className: this.props.classes.checkboxLabel,
             id: this.props.labelId,
             htmlFor: 'id-privacy' },
-          'By checking this box, I agree to the terms of the ',
+          'by checking this box, I agree to the terms of the ',
           React.createElement(
             'a',
             { href: '/privacy-policy' },
