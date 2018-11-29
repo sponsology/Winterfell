@@ -10,20 +10,20 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var React = require("react");
 
-var PrivacyInput = (function (_React$Component) {
-  _inherits(PrivacyInput, _React$Component);
+var GiverPrivacyInput = (function (_React$Component) {
+  _inherits(GiverPrivacyInput, _React$Component);
 
-  function PrivacyInput(props) {
-    _classCallCheck(this, PrivacyInput);
+  function GiverPrivacyInput(props) {
+    _classCallCheck(this, GiverPrivacyInput);
 
-    _get(Object.getPrototypeOf(PrivacyInput.prototype), "constructor", this).call(this, props);
+    _get(Object.getPrototypeOf(GiverPrivacyInput.prototype), "constructor", this).call(this, props);
 
     this.state = {
       checked: props.defaultChecked
     };
   }
 
-  _createClass(PrivacyInput, [{
+  _createClass(GiverPrivacyInput, [{
     key: "handleChange",
     value: function handleChange(e) {
       var _this = this;
@@ -54,7 +54,7 @@ var PrivacyInput = (function (_React$Component) {
         React.createElement(
           "p",
           null,
-          "You have set up your Account details. Now you will step through setting up your Profile to find sponsorship alignment opportunities with Givers. Next step is payment of your annual subscription."
+          "You have set up your Account details. Now you will step through setting up your Profile to find sponsorship alignment opportunities with Seekers."
         ),
         React.createElement("input", {
           type: "checkbox",
@@ -93,10 +93,10 @@ var PrivacyInput = (function (_React$Component) {
     }
   }]);
 
-  return PrivacyInput;
+  return GiverPrivacyInput;
 })(React.Component);
 
-PrivacyInput.defaultProps = {
+GiverPrivacyInput.defaultProps = {
   text: "",
   defaultChecked: false,
   classes: {},
@@ -107,4 +107,4 @@ PrivacyInput.defaultProps = {
   onBlur: function onBlur() {}
 };
 
-module.exports = PrivacyInput;
+module.exports = GiverPrivacyInput;
