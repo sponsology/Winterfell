@@ -1,18 +1,18 @@
-'use strict';
+"use strict";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 var errorMessages = {
-
   /*
    * Fallback Error Message
    */
-  'default': 'Please correct the field below',
+  default: 'Please correct the field below',
 
   /*
    * Min and Max string left message
    */
   isLength: function isLength(validationItem) {
     switch (validationItem.params.length) {
-
       case 1:
         return 'Please enter a value with at least ' + validationItem.params[0] + ' character' + (validationItem.params[0] != 1 ? 's' : '');
         break;
@@ -22,14 +22,12 @@ var errorMessages = {
         break;
 
       default:
-        return errorMessages['default'];
+        return errorMessages.default;
         break;
-
     }
 
     return errorMessage;
   },
-
   isAscii: 'Please enter or select a value',
 
   /*
@@ -151,13 +149,13 @@ var errorMessages = {
    */
   isAccepted: 'Please accept by clicking the checkbox'
 };
-
 /**
  * Add a single error message
  *
  * @param  string          type    Error message type
  * @param  string|function message Message or function to get message
  */
+
 errorMessages.addErrorMessage = function (type, message) {
   if (typeof type !== 'string') {
     throw new Error('Winterfell: First parameter of addErrorMessage ' + 'must be of type string');
@@ -169,14 +167,15 @@ errorMessages.addErrorMessage = function (type, message) {
 
   setErrorMessage(type, message);
 };
-
 /**
  * Add multiple error messages
  *
  * @param  object messages Error messages to add. type => func|string
  */
+
+
 errorMessages.addErrorMessages = function (messages) {
-  if (typeof messages !== 'object') {
+  if (_typeof(messages) !== 'object') {
     throw new Error('Winterfell: First parameter of addErrorMessages ' + 'must be of type object');
   }
 
@@ -184,25 +183,26 @@ errorMessages.addErrorMessages = function (messages) {
     errorMessages.addErrorMessage(type, messages[type]);
   }
 };
-
 /**
  * Get an error message for a validationItem
  *
  * @param  object  validationItem Validation error item
  * @return string                 Error message to display
  */
-errorMessages.getErrorMessage = function (validationItem) {
-  var errorMessage = typeof validationItem.message !== 'undefined' ? validationItem.message : typeof errorMessages[validationItem.type] !== 'undefined' ? errorMessages[validationItem.type] : errorMessages['default'];
 
+
+errorMessages.getErrorMessage = function (validationItem) {
+  var errorMessage = typeof validationItem.message !== 'undefined' ? validationItem.message : typeof errorMessages[validationItem.type] !== 'undefined' ? errorMessages[validationItem.type] : errorMessages.default;
   return typeof errorMessage === 'function' ? errorMessage(validationItem) : errorMessage;
 };
-
 /**
  * setErrorMessage
  *
  * @param  string          type    Error message type
  * @param  stirng|function message essage or function to get message
  */
+
+
 var setErrorMessage = function setErrorMessage(type, message) {
   errorMessages[type] = message;
 };

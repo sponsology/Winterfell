@@ -1,5 +1,7 @@
 "use strict";
 
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 var React = require("react");
 
 var inputTypes = {
@@ -16,13 +18,13 @@ var inputTypes = {
   privacyInput: require("./privacyInput"),
   giverPrivacyInput: require("./giverPrivacyInput")
 };
-
 /**
  * Add an input type
  *
  * @param  type      name     Name of InputType
  * @param  Component instance Input Type Component
  */
+
 inputTypes.addInputType = function (name, instance) {
   if (typeof name !== "string") {
     throw new Error("Winterfell: First parameter of addInputType " + "must be of type string");
@@ -34,14 +36,15 @@ inputTypes.addInputType = function (name, instance) {
 
   inputTypes[name] = instance;
 };
-
 /**
  * Add multiple InputTypes
  *
  * @param  object types InputTypes to add. string => Component
  */
+
+
 inputTypes.addInputTypes = function (types) {
-  if (typeof types !== "object") {
+  if (_typeof(types) !== "object") {
     throw new Error("Winterfell: First parameter of addInputTypes " + "must be of type object");
   }
 

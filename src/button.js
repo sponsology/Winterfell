@@ -1,10 +1,10 @@
-var React = require('react');
-import ProgressButton from 'react-progress-button'
+var React = require("react");
+import ProgressButton from "react-progress-button";
 
 class Button extends React.Component {
-  constructor(props){
-    super(props)
-    this.state = {buttonState: props.buttonState}
+  constructor(props) {
+    super(props);
+    this.state = { buttonState: props.buttonState };
   }
 
   handleClick(e) {
@@ -14,28 +14,29 @@ class Button extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     this.setState({
-      buttonState     : nextProps.buttonState
+      buttonState: nextProps.buttonState
     });
   }
 
   render() {
     return (
-      <ProgressButton href="#"
-         state={this.state.buttonState}
-         controlled={true}
-         onClick={this.handleClick.bind(this)}>
+      <ProgressButton
+        href="#"
+        state={this.state.buttonState}
+        controlled={true}
+        onClick={this.handleClick.bind(this)}
+      >
         {this.props.text}
       </ProgressButton>
     );
   }
-
-};
+}
 
 Button.defaultProps = {
-  buttonState: '',
-  text      : 'Submit',
-  className : undefined,
-  onClick   : () => {}
+  buttonState: "",
+  text: "Submit",
+  className: undefined,
+  onClick: () => {}
 };
 
 module.exports = Button;
