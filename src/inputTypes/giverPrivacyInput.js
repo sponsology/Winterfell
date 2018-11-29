@@ -1,6 +1,6 @@
 var React = require("react");
 
-class PrivacyInput extends React.Component {
+class GiverPrivacyInput extends React.Component {
   constructor(props) {
     super(props);
 
@@ -38,7 +38,7 @@ class PrivacyInput extends React.Component {
         <p>
           You have set up your Account details. Now you will step through
           setting up your Profile to find sponsorship alignment opportunities
-          with Givers. Next step is payment of your annual subscription.
+          with Seekers.
         </p>
         <input
           type="checkbox"
@@ -70,7 +70,7 @@ class PrivacyInput extends React.Component {
   }
 }
 
-PrivacyInput.defaultProps = {
+GiverPrivacyInput.defaultProps = {
   text: "",
   defaultChecked: false,
   classes: {},
@@ -81,4 +81,4 @@ PrivacyInput.defaultProps = {
   onBlur: () => {}
 };
 
-module.exports = PrivacyInput;
+module.exports = GiverPrivacyInput;
