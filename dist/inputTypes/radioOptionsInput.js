@@ -18,7 +18,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var React = require('react');
+var React = require("react");
 
 var RadioOptionsInput =
 /*#__PURE__*/
@@ -59,17 +59,17 @@ function (_React$Component) {
           type: "radio",
           name: _this2.props.name,
           "aria-labelledby": _this2.props.labelId,
-          id: 'id-' + opt.value,
+          id: "id-" + opt.value.replace(/\s+/g, ""),
           autoComplete: _this2.props.autoComplete,
           checked: _this2.state.value == opt.value,
           className: _this2.props.classes.radio,
-          required: _this2.props.required ? 'required' : undefined,
+          required: _this2.props.required ? "required" : undefined,
           onChange: _this2.handleChange.bind(_this2, opt.value),
           onBlur: _this2.props.onBlur.bind(null, _this2.state.value)
         }), React.createElement("label", {
           className: _this2.props.classes.radioLabel,
           id: _this2.props.labelId,
-          htmlFor: 'id-' + opt.value
+          htmlFor: "id-" + opt.value
         }, opt.text));
       }));
     }
@@ -78,12 +78,11 @@ function (_React$Component) {
   return RadioOptionsInput;
 }(React.Component);
 
-;
 RadioOptionsInput.defaultProps = {
   classes: {},
-  name: '',
-  value: '',
-  autoComplete: '',
+  name: "",
+  value: "",
+  autoComplete: "",
   options: [],
   onChange: function onChange() {},
   onBlur: function onBlur() {}

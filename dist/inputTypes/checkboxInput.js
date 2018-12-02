@@ -18,7 +18,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var React = require('react');
+var React = require("react");
 
 var CheckboxInput =
 /*#__PURE__*/
@@ -67,19 +67,19 @@ function (_React$Component) {
       }, React.createElement("input", {
         type: "checkbox",
         name: this.props.name,
-        id: 'id-' + opt.value,
+        id: "id-" + opt.value.replace(/\s+/g, ""),
         autoComplete: this.props.autoComplete,
         "aria-labelledby": this.props.labelId,
         className: this.props.classes.checkbox,
         defaultChecked: this.state.checked,
         value: this.props.value,
-        required: this.props.required ? 'required' : undefined,
+        required: this.props.required ? "required" : undefined,
         onChange: this.handleChange.bind(this),
         onBlur: this.props.onBlur.bind(null, this.state.checked ? this.props.value : undefined)
       }), React.createElement("label", {
         className: this.props.classes.checkboxLabel,
         id: this.props.labelId,
-        htmlFor: 'id-' + opt.value
+        htmlFor: "id-" + opt.value
       }, this.props.text));
     }
   }]);
@@ -87,14 +87,13 @@ function (_React$Component) {
   return CheckboxInput;
 }(React.Component);
 
-;
 CheckboxInput.defaultProps = {
-  text: '',
+  text: "",
   defaultChecked: false,
   classes: {},
-  name: '',
-  value: '',
-  autoComplete: '',
+  name: "",
+  value: "",
+  autoComplete: "",
   onChange: function onChange() {},
   onBlur: function onBlur() {}
 };
