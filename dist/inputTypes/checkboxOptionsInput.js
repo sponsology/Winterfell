@@ -61,8 +61,11 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return React.createElement("div", null, this.props.options.map(function (opt) {
-        return React.createElement("div", {
+      return React.createElement("ul", {
+        className: this.props.classes.checkboxList
+      }, this.props.options.map(function (opt) {
+        return React.createElement("li", {
+          key: opt.value,
           className: _this2.props.classes.checkboxListItem
         }, React.createElement("input", {
           type: "checkbox",
