@@ -30,9 +30,9 @@ class CheckboxOptionsInput extends React.Component {
 
   render() {
     return (
-      <ul className={this.props.classes.checkboxList}>
+      <div>
         {this.props.options.map(opt => (
-          <li key={opt.value} className={this.props.classes.checkboxListItem}>
+          <div className={this.props.classes.checkboxListItem}>
             <input
               type="checkbox"
               name={this.props.name}
@@ -53,9 +53,9 @@ class CheckboxOptionsInput extends React.Component {
             >
               {opt.text}
             </label>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     );
   }
 }

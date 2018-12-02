@@ -20,9 +20,9 @@ class RadioOptionsInput extends React.Component {
 
   render() {
     return (
-      <ul className={this.props.classes.radioList}>
+      <div>
         {this.props.options.map(opt => (
-          <li key={opt.value} className={this.props.classes.radioListItem}>
+          <div key={opt.value} className={this.props.classes.radioListItem}>
             <input
               type="radio"
               name={this.props.name}
@@ -42,9 +42,9 @@ class RadioOptionsInput extends React.Component {
             >
               {opt.text}
             </label>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     );
   }
 }

@@ -49,10 +49,8 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return React.createElement("ul", {
-        className: this.props.classes.radioList
-      }, this.props.options.map(function (opt) {
-        return React.createElement("li", {
+      return React.createElement("div", null, this.props.options.map(function (opt) {
+        return React.createElement("div", {
           key: opt.value,
           className: _this2.props.classes.radioListItem
         }, React.createElement("input", {
