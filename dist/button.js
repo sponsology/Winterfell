@@ -72,7 +72,7 @@ function (_React$Component) {
 Button.defaultProps = {
   buttonState: "",
   text: "Submit",
-  className: undefined,
+  className: "",
   onClick: function onClick() {}
 };
 module.exports = Button;
