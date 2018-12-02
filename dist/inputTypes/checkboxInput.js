@@ -79,7 +79,7 @@ function (_React$Component) {
       }), React.createElement("label", {
         className: this.props.classes.checkboxLabel,
         id: this.props.labelId,
-        htmlFor: "id-" + opt.value
+        htmlFor: "id-" + opt.value.replace(/\s+/g, "")
       }, this.props.text));
     }
   }]);

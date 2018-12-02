@@ -20,9 +20,9 @@ class RadioOptionsInput extends React.Component {
 
   render() {
     return (
-      <div>
+      <ul className={this.props.classes.radioList}>
         {this.props.options.map(opt => (
-          <div key={opt.value} className={this.props.classes.radioListItem}>
+          <li key={opt.value} className={this.props.classes.radioListItem}>
             <input
               type="radio"
               name={this.props.name}
@@ -38,13 +38,13 @@ class RadioOptionsInput extends React.Component {
             <label
               className={this.props.classes.radioLabel}
               id={this.props.labelId}
-              htmlFor={"id-" + opt.value}
+              htmlFor={"id-" + opt.value.replace(/\s+/g, "")}
             >
               {opt.text}
             </label>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     );
   }
 }

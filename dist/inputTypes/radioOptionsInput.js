@@ -49,8 +49,10 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return React.createElement("div", null, this.props.options.map(function (opt) {
-        return React.createElement("div", {
+      return React.createElement("ul", {
+        className: this.props.classes.radioList
+      }, this.props.options.map(function (opt) {
+        return React.createElement("li", {
           key: opt.value,
           className: _this2.props.classes.radioListItem
         }, React.createElement("input", {
@@ -67,7 +69,7 @@ function (_React$Component) {
         }), React.createElement("label", {
           className: _this2.props.classes.radioLabel,
           id: _this2.props.labelId,
-          htmlFor: "id-" + opt.value
+          htmlFor: "id-" + opt.value.replace(/\s+/g, "")
         }, opt.text));
       }));
     }
