@@ -57,7 +57,7 @@ function (_React$Component) {
     value: function componentWillReceiveProps(nextProps) {
       console.log("Nextprops ve: " + util.inspect(nextProps.validationErrors));
       this.setState({
-        validationErrors: nextProps.validationErrors,
+        //validationErrors: nextProps.validationErrors,
         buttonState: nextProps.buttonState
       });
     }
@@ -75,10 +75,11 @@ function (_React$Component) {
        */
 
 
-      var questionValidationErrors = this.state.validationErrors;
-      questionValidationErrors = questionValidationErrors.filter(function (item) {
+      var questionValidationErrors = [];
+      /*questionValidationErrors = questionValidationErrors.filter(function(item) {
         return item.questionId !== questionId;
-      });
+      });*/
+
       validations.forEach(function (validation) {
         if (Validation.validateAnswer(questionAnswer, validation, _this2.props.questionAnswers)) {
           return;

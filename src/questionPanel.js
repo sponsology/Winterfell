@@ -22,7 +22,7 @@ class QuestionPanel extends React.Component {
   componentWillReceiveProps(nextProps) {
     console.log("Nextprops ve: " + util.inspect(nextProps.validationErrors));
     this.setState({
-      validationErrors: nextProps.validationErrors,
+      //validationErrors: nextProps.validationErrors,
       buttonState     : nextProps.buttonState
     });
   }
@@ -37,10 +37,10 @@ class QuestionPanel extends React.Component {
      * Run the question through its validations and
      * show any error messages if invalid.
      */
-    var questionValidationErrors = this.state.validationErrors;
-    questionValidationErrors = questionValidationErrors.filter(function(item) {
+    var questionValidationErrors = [];
+    /*questionValidationErrors = questionValidationErrors.filter(function(item) {
       return item.questionId !== questionId;
-    });
+    });*/
     validations
       .forEach(validation => {
         if (Validation.validateAnswer(questionAnswer,
@@ -48,7 +48,6 @@ class QuestionPanel extends React.Component {
                                       this.props.questionAnswers)) {
           return;
         }
-
         questionValidationErrors.push({
           questionId : questionId,
           type    : validation.type,
