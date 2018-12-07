@@ -38,7 +38,7 @@ class QuestionPanel extends React.Component {
      * show any error messages if invalid.
      */
     var questionValidationErrors = this.state.validationErrors;
-    questionValidationErrors = questionValidationError.filter(function(item) {
+    questionValidationErrors = questionValidationErrors.filter(function(item) {
       return item.questionId !== questionId;
     });
     validations
