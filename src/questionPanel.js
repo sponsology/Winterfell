@@ -7,7 +7,7 @@ var ErrorMessages = require('./lib/errors');
 
 var Button      = require('./button');
 var QuestionSet = require('./questionSet');
-var util = require("util");
+
 class QuestionPanel extends React.Component {
 
   constructor(props) {
@@ -20,9 +20,7 @@ class QuestionPanel extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log("Nextprops ve: " + util.inspect(nextProps.validationErrors));
     this.setState({
-      //validationErrors: nextProps.validationErrors,
       buttonState     : nextProps.buttonState
     });
   }
@@ -38,9 +36,7 @@ class QuestionPanel extends React.Component {
      * show any error messages if invalid.
      */
     var questionValidationErrors = [];
-    /*questionValidationErrors = questionValidationErrors.filter(function(item) {
-      return item.questionId !== questionId;
-    });*/
+
     validations
       .forEach(validation => {
         if (Validation.validateAnswer(questionAnswer,
