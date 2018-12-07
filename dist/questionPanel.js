@@ -32,6 +32,8 @@ var Button = require('./button');
 
 var QuestionSet = require('./questionSet');
 
+var util = require("util");
+
 var QuestionPanel =
 /*#__PURE__*/
 function (_React$Component) {
@@ -53,6 +55,7 @@ function (_React$Component) {
   _createClass(QuestionPanel, [{
     key: "componentWillReceiveProps",
     value: function componentWillReceiveProps(nextProps) {
+      console.log("Nextprops ve: " + util.inspect(nextProps.validationErrors));
       this.setState({
         validationErrors: nextProps.validationErrors,
         buttonState: nextProps.buttonState
@@ -72,13 +75,17 @@ function (_React$Component) {
        */
 
 
-      var questionValidationErrors = [];
+      var questionValidationErrors = this.state.validationErrors;
+      questionValidationErrors = questionValidationError.filter(function (item) {
+        return item.questionId !== questionId;
+      });
       validations.forEach(function (validation) {
         if (Validation.validateAnswer(questionAnswer, validation, _this2.props.questionAnswers)) {
           return;
         }
 
         questionValidationErrors.push({
+          questionId: questionId,
           type: validation.type,
           message: ErrorMessages.getErrorMessage(validation)
         });
