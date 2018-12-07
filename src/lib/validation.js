@@ -11,6 +11,17 @@ var extraValidators = {
     return value == expected;
   },
 
+  isNotBlank: (value, length) => {
+    let result = false;
+    if (value === 'undefined'){
+      return false;
+    } else {
+      result = ((value.length < length) && value != 'undefined') ? false :  true;
+    }
+  	return result;
+  },
+
+
   /*
    * isAllIn Validation Method
    */

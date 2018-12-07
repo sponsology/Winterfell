@@ -41,6 +41,22 @@ var errorMessages = {
   isABN: 'Please enter a valid ABN',
 
   /*
+   * Is not blank
+   */
+  isNotBlank: function isNotBlank(validationItem) {
+    switch (validationItem.params.length) {
+      case 1:
+        return 'Please enter a value with at least ' + validationItem.params[0] + ' character' + (validationItem.params[0] !== 1 ? 's' : '');
+
+      case 2:
+        return 'Please enter a value between ' + validationItem.params[0] + ' and ' + validationItem.params[1] + ' characters long';
+
+      default:
+        return "Please enter a value";
+    }
+  },
+
+  /*
    * String contains seed
    */
   contains: function contains(validationItem) {
