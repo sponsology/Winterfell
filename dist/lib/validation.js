@@ -116,9 +116,6 @@ var getActiveQuestions = function getActiveQuestions(questions, questionAnswers,
     }
 
     question.input.options.forEach(function (option) {
-      console.log("got option " + option.conditionalQuestions);
-      console.log("Tests are ".concat(option.confitionalQuestions === "undefined", " and ").concat(option.conditionalQuestions.length == 0, " and ").concat(questionAnswers[question.questionId] != option.value));
-
       if (typeof option.conditionalQuestions === "undefined" || option.conditionalQuestions.length == 0 || questionAnswers[question.questionId] != option.value) {
         return;
       }
