@@ -2,11 +2,11 @@
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-var _ = require('lodash').noConflict();
+var _ = require("lodash").noConflict();
 
-var Validator = require('validator');
+var Validator = require("validator");
 
-var StringParser = require('./stringParser');
+var StringParser = require("./stringParser");
 
 var extraValidators = {
   /*
@@ -18,13 +18,22 @@ var extraValidators = {
   isNotBlank: function isNotBlank(value, length) {
     var result = false;
 
-    if (value === 'undefined') {
+    if (value === "undefined") {
       return false;
     } else {
-      result = value.length < length && value != 'undefined' ? false : true;
+      result = value.length < length && value != "undefined" ? false : true;
     }
 
     return result;
+  },
+  isNotBlankMultiSelect: function isNotBlankMultiSelect(value, length) {
+    var result = false;
+
+    if (value === "undefined") {
+      return false;
+    } else {
+      result = value.length < length && value != "undefined" ? false : true;
+    }
   },
 
   /*
@@ -49,7 +58,7 @@ var extraValidators = {
  */
 
 var validateAnswer = function validateAnswer(value, validationItem, questionAnswers) {
-  var validationMethod = typeof extraValidators[validationItem.type] !== 'undefined' ? extraValidators[validationItem.type] : Validator.hasOwnProperty(validationItem.type) && typeof Validator[validationItem.type] === 'function' ? Validator[validationItem.type] : undefined;
+  var validationMethod = typeof extraValidators[validationItem.type] !== "undefined" ? extraValidators[validationItem.type] : Validator.hasOwnProperty(validationItem.type) && typeof Validator[validationItem.type] === "function" ? Validator[validationItem.type] : undefined;
 
   if (!validationMethod) {
     throw new Error('Winterfell: Attempted to validate for undefined method "' + validationItem.type + '"');
@@ -68,7 +77,7 @@ var validateAnswer = function validateAnswer(value, validationItem, questionAnsw
    */
 
   validationParameters = validationParameters.map(function (p) {
-    return typeof p === 'string' ? StringParser(p, questionAnswers) : p;
+    return typeof p === "string" ? StringParser(p, questionAnswers) : p;
   });
   /*
    * Push the value of the question we're validating to
@@ -102,12 +111,12 @@ var getActiveQuestions = function getActiveQuestions(questions, questionAnswers,
       validations: question.validations
     });
 
-    if (typeof question.input.options === 'undefined' || question.input.options.length === 0) {
+    if (typeof question.input.options === "undefined" || question.input.options.length === 0) {
       return;
     }
 
     question.input.options.forEach(function (option) {
-      if (typeof option.conditionalQuestions === 'undefined' || option.conditionalQuestions.length == 0 || questionAnswers[question.questionId] != option.value) {
+      if (typeof option.conditionalQuestions === "undefined" || option.conditionalQuestions.length == 0 || questionAnswers[question.questionId] != option.value) {
         return;
       }
 
@@ -170,7 +179,7 @@ var getQuestionPanelInvalidQuestions = function getQuestionPanelInvalidQuestions
        */
 
 
-      if (typeof errors[questionId] === 'undefined') {
+      if (typeof errors[questionId] === "undefined") {
         errors[questionId] = [];
       }
 
@@ -188,12 +197,12 @@ var getQuestionPanelInvalidQuestions = function getQuestionPanelInvalidQuestions
 
 
 var addValidationMethod = function addValidationMethod(name, method) {
-  if (typeof name !== 'string') {
-    throw new Error('Winterfell: First parameter of addValidationMethod ' + 'must be of type string');
+  if (typeof name !== "string") {
+    throw new Error("Winterfell: First parameter of addValidationMethod " + "must be of type string");
   }
 
-  if (typeof method !== 'function') {
-    throw new Error('Winterfell: Second parameter of addValidationMethod ' + 'must be of type function');
+  if (typeof method !== "function") {
+    throw new Error("Winterfell: Second parameter of addValidationMethod " + "must be of type function");
   }
 
   extraValidators[name] = method;
@@ -206,8 +215,8 @@ var addValidationMethod = function addValidationMethod(name, method) {
 
 
 var addValidationMethods = function addValidationMethods(methods) {
-  if (_typeof(methods) !== 'object') {
-    throw new Error('Winterfell: First parameter of addValidationMethods ' + 'must be of type object');
+  if (_typeof(methods) !== "object") {
+    throw new Error("Winterfell: First parameter of addValidationMethods " + "must be of type object");
   }
 
   for (var methodName in methods) {
