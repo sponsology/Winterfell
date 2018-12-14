@@ -121,6 +121,13 @@ var getActiveQuestions = (questions, questionAnswers, activeQuestions) => {
     }
 
     question.input.options.forEach(option => {
+      console.log("got option " + option.conditionalQuestions);
+      console.log(
+        `Tests are ${options.confitionalQuestions === "undefined"} and ${option
+          .conditionalQuestions.length == 0} and ${questionAnswers[
+          question.questionId
+        ] != option.value}`
+      );
       if (
         typeof option.conditionalQuestions === "undefined" ||
         option.conditionalQuestions.length == 0 ||
