@@ -61,7 +61,8 @@ function (_React$Component) {
         href: "#",
         state: this.state.buttonState,
         controlled: true,
-        onClick: this.handleClick.bind(this)
+        onClick: this.handleClick.bind(this),
+        id: this.props.id
       }, this.props.text);
     }
   }]);
@@ -73,6 +74,7 @@ Button.defaultProps = {
   buttonState: "",
   text: "Submit",
   className: "",
-  onClick: function onClick() {}
+  onClick: function onClick() {},
+  id: "submit-button"
 };
 module.exports = Button;

@@ -25,6 +25,7 @@ class Button extends React.Component {
         state={this.state.buttonState}
         controlled={true}
         onClick={this.handleClick.bind(this)}
+        id={this.props.id}
       >
         {this.props.text}
       </ProgressButton>
@@ -36,7 +37,8 @@ Button.defaultProps = {
   buttonState: "",
   text: "Submit",
   className: "",
-  onClick: () => {}
+  onClick: () => {},
+  id: "submit-button"
 };
 
 module.exports = Button;
