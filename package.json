@@ -34,7 +34,7 @@
     "keycodez": "^1.0.0",
     "lodash": "^4.17.11",
     "react-progress-button": "^5.1.0",
-    "validator": "https://github.com/sponsology/validator.js/tarball/587f223926cb5da14213bca320954083e0db5574"
+    "validator": "https://github.com/sponsology/validator.js/tarball/1fd173e1c70c84f0a9bc39a07d1fa32173cc4610"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
